@@ -1,0 +1,88 @@
+body {
+  margin-top: 40px;
+	text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: #404040;
+}
+
+#loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #700c7d; /* Purple */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -70px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltiptext {
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: left;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 140px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: 72px; /*deal with popup offset*/
+  margin-bottom: -10px; /*deal with popup offset*/
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+#all-alumni h2{
+  margin-bottom: 30px;
+}
+
+#alumni {
+  column-count: 4;
+  list-style-type: none;
+  padding-left: 0;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+#alumni p {
+  display: inline-block;
+  margin-bottom: 0px
+}
+
+@media (max-width: 767px) {
+  #alumni {
+    width: 100%;
+    column-count: 1;
+  }
+}
